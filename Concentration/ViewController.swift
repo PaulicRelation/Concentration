@@ -15,13 +15,6 @@ class ViewController: UIViewController {
     var emojiChoices = ["👻","🙀","🦇","🎃","🍭", "😈","💀", "🍪", "😱", "🤡","👹","👁",]
     var emoji = [Int: String]()
     
-    var flipCount = 0 {
-        didSet {
-            flipCountLabel.text = "flips: \(flipCount)"
-          
-        }
-    }
-    
     @IBOutlet weak var flipCountLabel: UILabel!
     @IBOutlet var cardButtons: [UIButton]!
     
@@ -34,9 +27,7 @@ class ViewController: UIViewController {
             print("Chosen card is out of cardButtons")
         
         }
-        
-        flipCount += 1
-        
+        flipCountLabel.text = "flips: \(game.flips)"
     }
     
     func updateViewFromModel() {

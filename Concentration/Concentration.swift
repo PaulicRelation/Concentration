@@ -10,6 +10,7 @@ import Foundation
 class Concentration
 {
     var cards = [Card]()
+    var flips = 0
     
     var indexOfOneAndOnlyFaceUpCard: Int?
     
@@ -32,6 +33,7 @@ class Concentration
             }
             
         }
+        flips += 1
         
     }
     
@@ -45,6 +47,7 @@ class Concentration
         }
         
     }
+    
     
     init(numberOfPairsOfCard: Int) {
         for _ in 1 ... numberOfPairsOfCard {
