@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     
     lazy var game = Concentration (numberOfPairsOfCard: (cardButtons.count + 1)/2)
     
-    var emojiChoices = ["👻","🙀","🦇","🎃","🍭", "😈","💀", "🍪", "😱", "🤡","👹","👁",]
+    lazy var emojiChoices = getRandomTheme()
     var emoji = [Int: String]()
     
     @IBOutlet weak var flipCountLabel: UILabel!
@@ -33,7 +33,10 @@ class ViewController: UIViewController {
     
     @IBAction func newGame(_ sender: UIButton) {
         game.resetGame()
+        emoji = [Int: String]()
+        emojiChoices = getRandomTheme()
         updateViewFromModel()
+        print(emojiChoices)
         
     }
 
@@ -62,5 +65,28 @@ class ViewController: UIViewController {
         return emoji[card.identifier] ?? "?"
     }
     
+    func getRandomTheme() -> [String] {
+        
+        let    emojiPacks :[String: [String]] = [
+            "Animal":   ["🦆","🐛","🦋","🐝","🐌","🐞","🐬","🐳","🐋","🦈","🐊","🐢"],
+            "Sport":    ["🏄‍♀️","🏂","⚽️","🏀","🏈","🎾","🏐","🏉","🎱","🏆","🧘🏼‍♀️","🏋🏻‍♂️"],
+            "Fruit":    ["🍏","🍎","🍐","🍊","🍋","🍌","🍉","🍇","🍓","🍈","🍒","🍑"],
+            "Flags":    ["🇺🇸","🇧🇷","🇨🇦","🇨🇺","🇦🇷","🇺🇦","🏴󠁧󠁢󠁳󠁣󠁴󠁿","🇬🇧","🇹🇷","🇺🇾","🇪🇭","🇹🇨"],
+            "Food":     ["🥞","🥓","🥩","🍗","🍖","🌭","🍔","🍟","🍕","🥪","🥙","🌮"],
+            "Transport":["🚗","🚕","🚙","🚌","🚎","🏎","🚓","🚑","🚒","🚐","🚚","🚜"]
+        ]
+        
+        let keys = Array(emojiPacks.keys)
+        let result = emojiPacks[keys[keys.count.arc4random]]!
+        return result
+    }
+    
 }
-
+extension Int {
+    var arc4random : Int {
+        if self > 0 { return Int(arc4random_uniform(UInt32(self)))
+        }else
+            if self < 0 {return -Int((arc4random_uniform(UInt32(abs(self)))))
+            }   else {return 0}
+    }
+}

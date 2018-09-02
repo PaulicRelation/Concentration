@@ -37,6 +37,7 @@ class Concentration
         }
         flips += 1
         cards[index].isOpenedBefore = true
+    
     }
     
     
@@ -57,6 +58,7 @@ class Concentration
         }
         suffleCards()
         flips = 0
+        score = 0
         
     }
     
