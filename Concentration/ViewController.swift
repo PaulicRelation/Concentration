@@ -27,10 +27,17 @@ class ViewController: UIViewController {
             print("Chosen card is out of cardButtons")
         
         }
-        flipCountLabel.text = "flips: \(game.flips)"
+
     }
     
+    @IBAction func newGame(_ sender: UIButton) {
+        game.resetGame()
+        updateViewFromModel()
+        
+    }
+
     func updateViewFromModel() {
+        flipCountLabel.text = "flips: \(game.flips)"
         for index in cardButtons.indices {
             let button = cardButtons[index]
             let card = game.cards[index]
