@@ -11,6 +11,7 @@ struct Card
 {
     var isFaceUp = false
     var isMatched = false
+    var isOpenedBefore = false
     var identifier :Int
     
     static var identifierFactory = 0

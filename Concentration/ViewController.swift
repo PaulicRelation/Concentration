@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     var emoji = [Int: String]()
     
     @IBOutlet weak var flipCountLabel: UILabel!
+    @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet var cardButtons: [UIButton]!
     
     @IBAction func touchCard(_ sender: UIButton) {
@@ -38,6 +39,7 @@ class ViewController: UIViewController {
 
     func updateViewFromModel() {
         flipCountLabel.text = "flips: \(game.flips)"
+        scoreLabel.text = "score: \(game.score)"
         for index in cardButtons.indices {
             let button = cardButtons[index]
             let card = game.cards[index]
