@@ -35,12 +35,23 @@ class Concentration
         
     }
     
+    
+    func suffleCards() {
+        for  index in 0 ... cards.count-1 {
+            let randomIndex = Int(arc4random_uniform(UInt32(Int(cards.count-2))))
+            let temp = cards[randomIndex]
+            cards[randomIndex] = cards[index]
+            cards[index] = temp
+        }
+        
+    }
+    
     init(numberOfPairsOfCard: Int) {
         for _ in 1 ... numberOfPairsOfCard {
             let card = Card()
             cards += [card,card]
         }
-        //TODO: Suffle the cards
+        suffleCards()
 
     }
     
