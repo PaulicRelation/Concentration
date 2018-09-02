@@ -36,7 +36,6 @@ class ViewController: UIViewController {
         emoji = [Int: String]()
         emojiChoices = getRandomTheme()
         updateViewFromModel()
-        print(emojiChoices)
         
     }
 
