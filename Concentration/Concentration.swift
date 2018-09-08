@@ -40,23 +40,12 @@ class Concentration
     
     }
     
-    
-    func suffleCards() {
-        for  index in 0 ... cards.count-1 {
-            let randomIndex = Int(arc4random_uniform(UInt32(Int(cards.count-2))))
-            let temp = cards[randomIndex]
-            cards[randomIndex] = cards[index]
-            cards[index] = temp
-        }
-        
-    }
-    
     func resetGame (){
         for index in cards.indices {
             cards[index].isFaceUp = false
             cards[index].isMatched = false
         }
-        suffleCards()
+        cards.suffleElements()
         flips = 0
         score = 0
         
@@ -67,8 +56,7 @@ class Concentration
             let card = Card()
             cards += [card,card]
         }
-        suffleCards()
-
+        cards.suffleElements()
     }
     
 }

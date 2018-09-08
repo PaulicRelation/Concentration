@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E917CBD321443AE700F8B9A8 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E917CBD221443AE700F8B9A8 /* Extentions.swift */; };
 		E92ABBB2213AF2D900B96DA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92ABBB1213AF2D900B96DA0 /* AppDelegate.swift */; };
 		E92ABBB4213AF2D900B96DA0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92ABBB3213AF2D900B96DA0 /* ViewController.swift */; };
 		E92ABBB7213AF2D900B96DA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E92ABBB5213AF2D900B96DA0 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E917CBD221443AE700F8B9A8 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		E92ABBAE213AF2D900B96DA0 /* Concentration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Concentration.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E92ABBB1213AF2D900B96DA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E92ABBB3213AF2D900B96DA0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 		E92ABBB0213AF2D900B96DA0 /* Concentration */ = {
 			isa = PBXGroup;
 			children = (
+				E917CBD221443AE700F8B9A8 /* Extentions.swift */,
 				E92ABBB3213AF2D900B96DA0 /* ViewController.swift */,
 				E92DAE0B213BCFF8007BBCEA /* Concentration.swift */,
 				E92DAE0D213BEC06007BBCEA /* Card.swift */,
@@ -151,6 +154,7 @@
 			files = (
 				E92ABBB4213AF2D900B96DA0 /* ViewController.swift in Sources */,
 				E92ABBB2213AF2D900B96DA0 /* AppDelegate.swift in Sources */,
+				E917CBD321443AE700F8B9A8 /* Extentions.swift in Sources */,
 				E92DAE0C213BCFF8007BBCEA /* Concentration.swift in Sources */,
 				E92DAE0E213BEC06007BBCEA /* Card.swift in Sources */,
 			);
