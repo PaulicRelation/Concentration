@@ -7,13 +7,14 @@
 //
 
 import Foundation
+
 class Concentration
 {
-    var cards = [Card]()
-    var flips = 0
-    var score = 0
+    private (set) var cards = [Card]()
+    private (set) var flips = 0
+    private (set) var score = 0
     
-    var indexOfOneAndOnlyFaceUpCard: Int? {
+    private var indexOfOneAndOnlyFaceUpCard: Int? {
         get {
             var foundIndex: Int?
             for index in cards.indices {

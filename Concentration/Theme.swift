@@ -15,7 +15,8 @@ struct Theme {
     var backgroundColor: UIColor
     
 }
- let    theme :[Theme] = [
+
+let    theme :[Theme] = [
     
     Theme (themeName: "Hellowen",
            emojiPack: ["🧛‍♀️","🧟‍♀️","🎃","🧟‍♂️","🕷","🍭","💀","🤡","👁","🦇","😱","🙀", "👹", "👻", "☠️", "👺", "🧛‍♂️", "🧙‍♀️", "🧝🏿‍♀️",],
