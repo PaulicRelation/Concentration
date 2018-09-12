@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     
     private var cardBackColor = UIColor.orange
     private var deskTopColor = UIColor.black
-    private var emojiPack = ["🧛‍♀️","🧟‍♀️","🎃","🧟‍♂️","🕷","🍭","💀","🤡","👁","🦇","😱","🙀"]
+    private var emojiPack = ["🧛‍♀️","🧟‍♀️","🎃","🧟‍♂️","🕷","🍭","💀","🤡","👁","🦇","😱","🙀", "👹", "👻", "☠️", "👺", "🧛‍♂️", "🧙‍♀️", "🧝🏿‍♀️",]
     private var themeName = "Hellowen"
     
     private var themeIndex = 0 {
