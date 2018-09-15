@@ -35,3 +35,12 @@ extension Array {
         }
     }
 }
+
+extension Collection {
+    
+    var OneAndOnly: Element? {
+        return count == 1 ? first : nil
+    }
+    
+    
+}
