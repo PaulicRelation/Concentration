@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     
     private var cardBackColor = UIColor.orange
     private var deskTopColor = UIColor.black
-    private var emojiPack = ["🧛‍♀️","🧟‍♀️","🎃","🧟‍♂️","🕷","🍭","💀","🤡","👁","🦇","😱","🙀", "👹", "👻", "☠️", "👺", "🧛‍♂️", "🧙‍♀️", "🧝🏿‍♀️",]
+    private var emojiPack = "🧛‍♀️🧟‍♀️🎃🧟‍♂️🕷🍭💀🤡👁🦇😱🙀👹👻☠️👺🧛‍♂️🧙‍♀️🧝🏿‍♀️"
     private var themeName = "Hellowen"
     
     private var themeIndex = 0 {
@@ -58,7 +58,8 @@ class ViewController: UIViewController {
     
     private func emoji(for card: Card) -> String {
         if emoji[card] == nil, emojiChoices.count > 0 {
-            emoji[card] = emojiChoices.remove(at: emojiChoices.count.arc4random)
+            let randomStringIndex = emojiChoices.index(emojiChoices.startIndex, offsetBy: emojiChoices.count.arc4random)
+            emoji[card] = String(emojiChoices.remove(at: randomStringIndex))
             
         }
         return emoji[card] ?? "?"
