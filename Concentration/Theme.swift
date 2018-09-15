@@ -37,7 +37,7 @@ let    theme :[Theme] = [
            backgroundColor: #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1)
     ),
     Theme (themeName: "Fruit",
-           emojiPack: ["🍏","🍎","🍐","🍊","🍋","🍌","🍉","🍇","🍓","🍈","🍒","🍑", "🌽", "🍌", "🥥", "🍆", "🥑", "🌶", "🍍",],
+           emojiPack: ["🍏","🍎","🍐","🍊","🍋","🍌","🍉","🍇","🍓","🍈","🍒","🍑", "🌽", "🥝", "🥥", "🍆", "🥑", "🌶", "🍍",],
            primaryColor: #colorLiteral(red: 0.5058823824, green: 0.3372549117, blue: 0.06666667014, alpha: 1),
            backgroundColor: #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)
     ),
