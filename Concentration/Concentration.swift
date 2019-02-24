@@ -25,6 +25,7 @@ struct Concentration
         }
         
     }
+    private var lastMatchedTime = NSDate().timeIntervalSince1970
     
     mutating func choseCard (at index: Int) {
         assert(cards.indices.contains(index), "Concentration.chooseCard (at \(index)): chusen index not in the cards)")
@@ -34,7 +35,10 @@ struct Concentration
                 if cards[machIndex]  == cards[index]  {
                     cards[index].isMatched = true
                     cards[machIndex].isMatched = true
-                    score += 2
+                    let currentTime  = NSDate().timeIntervalSince1970
+                    let timeToMached = currentTime - lastMatchedTime
+                    score = score + Int(100/(timeToMached))
+                    lastMatchedTime = NSDate().timeIntervalSince1970
                 }
                 cards[index].isFaceUp = true
             } else {

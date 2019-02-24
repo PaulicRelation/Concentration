@@ -42,5 +42,4 @@ extension Collection {
         return count == 1 ? first : nil
     }
     
-    
 }
